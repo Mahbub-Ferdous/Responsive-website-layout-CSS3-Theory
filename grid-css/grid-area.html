@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Grid</title>
+    <style>
+        .container {
+            background-color: rgb(7, 95, 95);
+            padding: 10px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            /*  means 2 ta column soman vabe hobe ar ekta tader double hobe 2fr e */
+            grid-template-rows: auto auto auto auto;
+            /*  this is the grid-templete-column-row property, we can use it for sizing of column and row and how much column and row haver */
+            /*gap: 10px 20px;
+            10px row te and 20px column e */
+            /*gap: 15px;
+            15px row and column duitai use hoy */
+            column-gap: 10px;
+            row-gap: 20px;
+            /*  this is indivisual gap for row and column different different css property */
+
+        }
+
+        .container-items {
+            background-color: cadetblue;
+            border: 1px solid black;
+            font-size: 30px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #item2 {
+            grid-area: 1 / 1 / 3 / 3;
+            /* grid-area full property but eta 1st ta- row, 2nd ta - column, 3rd ta - row, 4th ta - column mane koi theke suru hoye koi sesh hobe arki */
+        }
+
+        .container-2 {
+            display: grid;
+            background-color: rgb(7, 95, 95);
+            padding: 10px;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+
+
+        }
+
+        #item6 {
+            grid-area: 2 / 2 / span 2 / span 2;
+            /*  same as ager ta just ekhane span gap deya hoiche jeta prothom line column and row er start line theke hisab kora hoy center start line theke na */
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Exploring Css Grid:</h1>
+    <div class="container">
+        <div class="container-items">item-1</div>
+        <div id="item2" class="container-items">item-2</div>
+        <div class="container-items">item-3</div>
+        <div class="container-items">item-4</div>
+        <div class="container-items">item-5</div>
+        <div class="container-items">item-6</div>
+        <div class="container-items">item-7</div>
+        <div class="container-items">item-8</div>
+        <div class="container-items">item-9</div>
+        <div class="container-items">item-10</div>
+        <div class="container-items">item-11</div>
+        <div class="container-items">item-12</div>
+    </div><br><br>
+    <div class="container-2">
+        <div class="container-items">item-1</div>
+        <div class="container-items">item-2</div>
+        <div class="container-items">item-3</div>
+        <div class="container-items">item-4</div>
+        <div class="container-items">item-5</div>
+        <div id="item6" class="container-items">item-6</div>
+        <div class="container-items">item-7</div>
+        <div class="container-items">item-8</div>
+        <div class="container-items">item-9</div>
+        <div class="container-items">item-10</div>
+        <div class="container-items">item-11</div>
+        <div class="container-items">item-12</div>
+    </div>
+</body>
+
+</html>

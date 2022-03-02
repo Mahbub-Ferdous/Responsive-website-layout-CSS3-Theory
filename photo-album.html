@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo-Album using Flexbox and position</title>
+    <style>
+        .photo-album {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+
+        }
+
+        .photo-frame {
+            width: 300px;
+            height: 225px;
+            border: 3px solid rgba(92, 90, 90, 0.781);
+            margin: 20px;
+            border-radius: 10px;
+            position: relative;
+            /* ar ekhane position relative deyar karon holo cz amra ono container er position absolute kore tar top 0 dile seta body tag porjonto chole ase ar seta aktate hole jei container e atkabo setar position relative dite hobe  */
+            overflow: hidden;
+            /* ekhane overflow deyar karon holo cause photo-frame hover hobe but onno jayga nibe tai */
+
+        }
+
+        .photo-frame img {
+            width: 100%;
+            border-radius: 7px;
+        }
+
+        .photo-details {
+            position: absolute;
+            top: 0;
+            /* ekhane absolute karon amra ei likha ta image er upore show korbo ar amra jani position absolute e container ta jump diye top 0 dile body tag porjonto chole jay */
+            display: none;
+            /*  ekhane display none deyar mane holo basically jei caption ta chobite chilo seta visible hobe na */
+
+        }
+
+        .photo-details p,
+        h3 {
+            position: relative;
+            top: 30px;
+
+        }
+
+        .photo-details h3 {
+            background-color: rgba(27, 23, 23, 0.616);
+        }
+
+        .photo-details p {
+            text-align: justify;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        .photo-frame:hover .photo-details {
+            background-color: rgba(129, 29, 49, 0.404);
+            color: white;
+            height: 180px;
+            width: 300px;
+            text-align: center;
+            display: block;
+
+            /* ekhane jokhn hover kobe mouse gele tokhn seta show kora lagbe but seta already display:none; e chilo tai etay display:block; thaklei hover hole dekhabe */
+        }
+
+        .photo-frame:hover .photo {
+            transition: transform 0.5s ease-in-out;
+            /* basically amra ektu transition korte chaichilam so kake korlam transform k 0.5 sec dhore and transition-timing-function ease-in-out korbo but amra kono delay dibo nah  */
+            transform: scale(1.25);
+            /* ekhane amra photo-frame k hover korlam just photo class take kintu seta transform hoye overflow kortechilo seta overflow na kore only photo ta transform hobe setar jonno .photo-frame class er moddhe overflow:hidden; kore dite hobe */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Photo-Album using Flexbox and position</h1><br>
+    </header>
+    <section>
+        <h3>Tiger Album:</h3><br><br>
+        <div class="photo-album">
+            <div class="photo-frame">
+                <div class="photo">
+                    <img src="images/tiger.jpg" alt="">
+                </div>
+                <div class="photo-details">
+                    <h3>Tiger Mama Candid</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, fugit culpa facilis
+                        reiciendis ab provident enim ullam.</p>
+                </div>
+            </div>
+            <div class="photo-frame">
+                <div class="photo">
+                    <img src="images/tiger.jpg" alt="">
+                </div>
+                <div class="photo-details">
+                    <h3>Tiger Mama Candid</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, fugit culpa facilis
+                        reiciendis ab provident enim ullam.</p>
+                </div>
+            </div>
+            <div class="photo-frame">
+                <div class="photo">
+                    <img src="images/tiger.jpg" alt="">
+                </div>
+                <div class="photo-details">
+                    <h3>Tiger Mama Candid</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, fugit culpa facilis
+                        reiciendis ab provident enim ullam.</p>
+                </div>
+            </div>
+            <div class="photo-frame">
+                <div class="photo">
+                    <img src="images/tiger.jpg" alt="">
+                </div>
+                <div class="photo-details">
+                    <h3>Tiger Mama Candid</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, fugit culpa facilis
+                        reiciendis ab provident enim ullam.</p>
+                </div>
+            </div>
+            <div class="photo-frame">
+                <div class="photo">
+                    <img src="images/tiger.jpg" alt="">
+                </div>
+                <div class="photo-details">
+                    <h3>Tiger Mama Candid</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, fugit culpa facilis
+                        reiciendis ab provident enim ullam.</p>
+                </div>
+            </div>
+            <div class="photo-frame">
+                <div class="photo">
+                    <img src="images/tiger.jpg" alt="">
+                </div>
+                <div class="photo-details">
+                    <h3>Tiger Mama Candid</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, fugit culpa facilis
+                        reiciendis ab provident enim ullam.</p>
+                </div>
+            </div>
+            <div class="photo-frame">
+                <div class="photo">
+                    <img src="images/tiger.jpg" alt="">
+                </div>
+                <div class="photo-details">
+                    <h3>Tiger Mama Candid</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, fugit culpa facilis
+                        reiciendis ab provident enim ullam.</p>
+                </div>
+            </div>
+            <div class="photo-frame">
+                <div class="photo">
+                    <img src="images/tiger.jpg" alt="">
+                </div>
+                <div class="photo-details">
+                    <h3>Tiger Mama Candid</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, fugit culpa facilis
+                        reiciendis ab provident enim ullam.</p>
+                </div>
+            </div>
+            <div class="photo-frame">
+                <div class="photo">
+                    <img src="images/tiger.jpg" alt="">
+                </div>
+                <div class="photo-details">
+                    <h3>Tiger Mama Candid</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, fugit culpa facilis
+                        reiciendis ab provident enim ullam.</p>
+                </div>
+            </div>
+            <div class="photo-frame">
+                <div class="photo">
+                    <img src="images/tiger.jpg" alt="">
+                </div>
+                <div class="photo-details">
+                    <h3>Tiger Mama Candid</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, fugit culpa facilis
+                        reiciendis ab provident enim ullam.</p>
+                </div>
+            </div>
+            <div class="photo-frame">
+                <div class="photo">
+                    <img src="images/tiger.jpg" alt="">
+                </div>
+                <div class="photo-details">
+                    <h3>Tiger Mama Candid</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, fugit culpa facilis
+                        reiciendis ab provident enim ullam.</p>
+                </div>
+            </div>
+            <div class="photo-frame">
+                <div class="photo">
+                    <img src="images/tiger.jpg" alt="">
+                </div>
+                <div class="photo-details">
+                    <h3>Tiger Mama Candid</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, fugit culpa facilis
+                        reiciendis ab provident enim ullam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

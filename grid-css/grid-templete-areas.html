@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Grid</title>
+    <style>
+        .container {
+            background-color: rgb(7, 95, 95);
+            padding: 10px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            /*  means 2 ta column soman vabe hobe ar ekta tader double hobe 2fr e */
+
+            /*gap: 10px 20px;
+            10px row te and 20px column e */
+            /*gap: 15px;
+            15px row and column duitai use hoy */
+            column-gap: 10px;
+            row-gap: 20px;
+            /*  this is indivisual gap for row and column different different css property */
+            grid-template-areas: 'myArea myArea myArea';
+            /* grid-template-areas ta value mainly rendom vabe likha hoy cause abar grid-area setar dile size hoy */
+
+
+
+
+
+        }
+
+        .container-items {
+            background-color: cadetblue;
+            border: 1px solid black;
+            font-size: 30px;
+            text-align: center;
+            padding: 20px;
+
+        }
+
+
+
+        .container-2 {
+            display: grid;
+            height: 800px;
+            background-color: rgb(7, 95, 95);
+            padding: 10px;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            align-content: space-between;
+            /* align-content all property same as justify-content property just align-content virtically sob kaj kore ar justify-content gula horizontally kaj kore */
+
+
+        }
+
+        .container-3 {
+            display: grid;
+            background-color: rgb(247, 195, 132);
+            grid-template-columns: auto auto 200px;
+            padding: 10px;
+            gap: 10px;
+            grid-template-areas: 'myArea myArea.....';
+
+        }
+
+        .container-4 {
+            background-color: rgb(247, 195, 132);
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+            gap: 10px;
+            grid-template-areas: 'myArea myArea...''myArea myArea....';
+        }
+
+        .container-5 {
+            background-color: rgb(247, 195, 132);
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+            gap: 10px;
+            grid-template-areas:
+                'header header header'
+                'menu section main'
+                'menu article article'
+                'footer footer footer'
+
+
+        }
+
+        .container-6 {
+            background-color: rgb(247, 195, 132);
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+            gap: 10px;
+
+        }
+
+        .item1 {
+            grid-area: myArea;
+        }
+
+        .item2 {
+            grid-area: myArea;
+            /*  mane mainly n sonkhok myArea and duita likha so item2 duita column niche  */
+        }
+
+        .item3 {
+            grid-area: myArea;
+            /* ekhane column and row duitar kaj e hoiche cause n sonhkkhok duita value chili grid-templete-areas te */
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .menu {
+            grid-area: menu;
+            display: grid;
+            align-content: center;
+            /* cause eta center ana lagbe ar align-content: center; dile seta horizontal and vertically e center hoy */
+        }
+
+        .section {
+            grid-area: section;
+        }
+
+        .main {
+            grid-area: main;
+
+        }
+
+        .article {
+            grid-area: article;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Exploring Css Grid:</h1>
+    <div class="container">
+        <div class="container-items item1">item-1</div>
+        <div class="container-items">item-2</div>
+        <div class="container-items">item-3</div>
+        <div class="container-items">item-4</div>
+        <div class="container-items">item-5</div>
+        <div class="container-items">item-6</div>
+        <div class="container-items">item-7</div>
+        <div class="container-items">item-8</div>
+        <div class="container-items">item-9</div>
+        <div class="container-items">item-10</div>
+        <div class="container-items">item-11</div>
+        <div class="container-items">item-12</div>
+    </div><br><br>
+    <div class="container-2">
+        <div class="container-items">item-1</div>
+        <div class="container-items">item-2</div>
+        <div class="container-items">item-3</div>
+        <div class="container-items">item-4</div>
+        <div class="container-items">item-5</div>
+        <div id="item6" class="container-items">item-6</div>
+        <div class="container-items">item-7</div>
+        <div class="container-items">item-8</div>
+        <div class="container-items">item-9</div>
+        <div class="container-items">item-10</div>
+        <div class="container-items">item-11</div>
+        <div class="container-items">item-12</div>
+    </div><br><br>
+    <div class="container-3">
+        <div class="container-items">item-1</div>
+        <div class="container-items item2">item-2</div>
+        <div class="container-items">item-3</div>
+        <div class="container-items">item-4</div>
+        <div class="container-items">item-5</div>
+        <div id="item6" class="container-items">item-6</div>
+        <div class="container-items">item-7</div>
+        <div class="container-items">item-8</div>
+        <div class="container-items">item-9</div>
+        <div class="container-items">item-10</div>
+        <div class="container-items">item-11</div>
+        <div class="container-items">item-12</div>
+    </div><br><br>
+    <div class="container-4">
+        <div class="container-items item3">item-1</div>
+        <div class="container-items">item-2</div>
+        <div class="container-items">item-3</div>
+        <div class="container-items">item-4</div>
+        <div class="container-items">item-5</div>
+        <div id="item6" class="container-items">item-6</div>
+        <div class="container-items">item-7</div>
+        <div class="container-items">item-8</div>
+        <div class="container-items">item-9</div>
+        <div class="container-items">item-10</div>
+        <div class="container-items">item-11</div>
+        <div class="container-items">item-12</div>
+    </div><br><br>
+    <div class="container-5">
+        <div class="container-items header"></div>
+        <div class="container-items header"></div>
+        <div class="container-items header">Header</div>
+        <div class="container-items menu"></div>
+        <div class="container-items section">Section</div>
+        <div class="container-items main">Main</div>
+        <div class="container-items menu">Menu</div>
+        <div class="container-items article"></div>
+        <div class="container-items article">Article</div>
+        <div class="container-items footer"></div>
+        <div class="container-items footer"></div>
+        <div class="container-items footer">Footer</div>
+    </div><br><br>
+    <div class="container-6">
+        <div class="container-items">item-1</div>
+        <div class="container-items">item-2</div>
+        <div class="container-items">item-3</div>
+        <div class="container-items">item-4</div>
+        <div class="container-items">item-5</div>
+        <div id="item6" class="container-items">item-6</div>
+        <div class="container-items">item-7</div>
+        <div class="container-items">item-8</div>
+        <div class="container-items">item-9</div>
+        <div class="container-items">item-10</div>
+        <div class="container-items">item-11</div>
+        <div class="container-items">item-12</div>
+    </div>
+</body>
+
+</html>

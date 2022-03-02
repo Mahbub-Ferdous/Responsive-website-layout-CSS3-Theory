@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resposive - media query and flexbox</title>
+    <style>
+        .main-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            /* media query amra use na kore seta flexbox er flex-wrap: wrap; diye sohojei korte pari */
+
+
+        }
+
+        .food {
+            border: 3px solid rgb(138, 133, 138);
+            border-radius: 5px;
+            width: 300px;
+            margin: 10px;
+        }
+
+        .food img {
+            width: 200px;
+        }
+
+        .food button {
+            background-color: rgb(207, 88, 45);
+            width: 100px;
+            height: 30px;
+            font-size: 15px;
+            font-style: italic;
+            font-weight: 700;
+            color: white;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+            padding: 10px;
+        }
+
+        .price button {
+            position: relative;
+            left: 90px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>responsive by using media query and flexbox</h1><br><br><br>
+    <div class="main-container">
+        <div class="food">
+            <img src="images/food.jpg" alt="">
+            <h3>Price: 500</h3>
+            <div class="price">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quaerat. Veritatis voluptatibus
+                    dicta
+                    magni molestias.<br><br><button>Order Now</button></p>
+            </div>
+        </div>
+        <div class="food">
+            <img src="images/food.jpg" alt="">
+            <h3>Price: 501</h3>
+            <div class="price">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quaerat. Veritatis voluptatibus
+                    dicta
+                    magni molestias.<br><br><button>Order Now</button></p>
+            </div>
+        </div>
+        <div class="food">
+            <img src="images/food.jpg" alt="">
+            <h3>Price: 502</h3>
+            <div class="price">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quaerat. Veritatis voluptatibus
+                    dicta
+                    magni molestias.<br><br><button>Order Now</button></p>
+            </div>
+        </div>
+        <div class="food">
+            <img src="images/food.jpg" alt="">
+            <h3>Price: 503</h3>
+            <div class="price">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quaerat. Veritatis voluptatibus
+                    dicta
+                    magni molestias.<br><br><button>Order Now</button></p>
+            </div>
+        </div>
+        <div class="food">
+            <img src="images/food.jpg" alt="">
+            <h3>Price: 504</h3>
+            <div class="price">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quaerat. Veritatis voluptatibus
+                    dicta
+                    magni molestias.<br><br><button>Order Now</button></p>
+            </div>
+        </div>
+        <div class="food">
+            <img src="images/food.jpg" alt="">
+            <h3>Price: 505</h3>
+            <div class="price">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quaerat. Veritatis voluptatibus
+                    dicta
+                    magni molestias.<br><br><button>Order Now</button></p>
+            </div>
+        </div>
+        <div class="food">
+            <img src="images/food.jpg" alt="">
+            <h3>Price: 506</h3>
+            <div class="price">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quaerat. Veritatis voluptatibus
+                    dicta
+                    magni molestias.<br><br><button>Order Now</button></p>
+            </div>
+        </div>
+        <div class="food">
+            <img src="images/food.jpg" alt="">
+            <h3>Price: 507</h3>
+            <div class="price">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quaerat. Veritatis voluptatibus
+                    dicta
+                    magni molestias.<br><br><button>Order Now</button></p>
+            </div>
+        </div>
+        <!-- in this html tags we can use vs code emmet shortcut = .main-container>.food*8>img[src="images/food.jpg"]+h3{Price: $@500}+p>lorem15>button{Order now}  mens ".main-container er moddhe hobe .food name 8ta class and prottektar moddhe img thakbe sathe image source and ekta h3 with price and tar sathe ekta p tag and tar moddhe ekta button basically ei sob gula component e .food class er mioddhe thakbe" -->
+    </div>
+</body>
+
+</html>
